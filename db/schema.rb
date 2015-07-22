@@ -32,10 +32,11 @@ ActiveRecord::Schema.define(version: 20150721232652) do
   create_table "observations", force: :cascade do |t|
     t.string   "content"
     t.string   "type"
-    t.integer  "artifact_id"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "observeable_id"
+    t.string   "observeable_type"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "projects", force: :cascade do |t|

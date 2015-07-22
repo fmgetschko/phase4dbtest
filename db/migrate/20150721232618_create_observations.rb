@@ -3,8 +3,9 @@ class CreateObservations < ActiveRecord::Migration
     create_table :observations do |t|
       t.string :content
       t.string :type
-      t.integer :artifact_id
       t.integer :user_id
+      t.integer :observeable_id
+      t.string :observeable_type
 
       t.timestamps null: false
     end
